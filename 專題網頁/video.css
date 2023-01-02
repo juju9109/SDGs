@@ -1,0 +1,822 @@
+html{
+  font-family: 'Noto Sans TC', sans-serif;
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+
+.cursor{
+  position:fixed;
+  z-index: 9999999;
+  width: 25px;
+  height: 25px;
+  border-radius:50% ;
+  background-color: #FFFFFF;
+  transition: 0.1s;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+
+}
+
+.link-grow{
+  transform: scale(2);
+}
+
+a{
+  cursor: none;
+}
+li{
+  cursor: none;
+}
+section{
+  /* scroll-snap-align: center; */
+}
+
+body{
+    margin: auto;
+    padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      scroll-snap-type: y proximity;
+      cursor: none;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    
+}
+
+/* menu */
+.選{
+  position: absolute;
+ transition: 0s;
+
+}
+
+.選單{
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  top: 83px;
+left: 132.5px;
+
+}
+
+ul li:hover ~.cursor
+{
+  transform: scale(6);
+}
+
+.語文{
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  top: 178px;
+left: 132.5px;
+}
+
+.中{
+  position: absolute;
+ transition: 0s;
+}
+
+
+ul{
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  align-items:flex-start;
+  line-height: 90px;
+  transform:translate(20%,25%);
+  font-size: 18px;
+  color: white;
+}
+
+li{
+font-size: 15px;
+color: #aeaeae;
+background-color: rgb(72, 72, 72);
+padding: 20px 15px;
+line-height: 0;
+margin-bottom: 15px;
+border-radius: 10px;
+transition: 0.5s;
+}
+
+li:hover{
+  display: block;
+  background-color: white;
+  border-radius: 0px;
+  
+}
+
+
+
+.menu2 ul{
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  align-items:flex-start;
+  line-height: 90px;
+  transform:translate(20%,78%);
+  font-size: 18px;
+  color: white;
+}
+
+.menu2 li{
+font-size: 15px;
+color: #aeaeae;
+background-color: rgb(72, 72, 72);
+padding: 20px 15px;
+line-height: 0;
+margin-bottom: 15px;
+border-radius: 10px;
+transition: 0.5s;
+}
+
+li:hover{
+  display: block;
+  background-color: white;
+  border-radius: 0px;
+  
+}
+
+
+
+
+.menu1{
+  opacity: 70%;
+  background-color: #ffffff;
+  position: fixed;
+  right: 0px;
+  width: 200px;
+  height: 600px;
+  z-index: 20000;
+  overflow: hidden;
+  clip-path: circle(20px at 155px 105px);
+  transition: 0.5s linear ;
+  
+}
+
+.menu1:hover{
+  clip-path: circle(1000px at 35px 100px);
+  background-color: #5e5e5e;
+  opacity: 100%;
+  /* cursor: pointer; */
+  z-index: 21000;
+}
+
+
+.menu2{
+  opacity: 70%;
+  background-color: #ffffff;
+  position: fixed;
+  right: 0px;
+  width: 200px;
+  height: 600px;
+  border-radius: 5px;
+  z-index: 20000;
+  overflow: hidden;
+  clip-path: circle(20px at 155px 200px);
+  transition: 0.5s linear ;
+  /* cursor: pointer; */
+}
+.menu2:hover{
+  opacity: 100%;
+  clip-path: circle(700px at 35px 100px);
+  border-radius: 5px;
+  background-color: #5e5e5e;
+  /* cursor: pointer; */
+}
+
+.menu3{
+  opacity: 70%;
+  background-color: #5e5e5e;
+  position: fixed;
+  right: 25px;
+  top: 278px;
+  width: 150px;
+  height: 40px;
+  border-radius: 100px;
+  z-index: 20000;
+  overflow: hidden;
+  clip-path: circle(20px at 130px 20px);
+  transition: 0.5s linear ;
+  /* cursor: pointer; */
+  z-index: 1900;
+}
+
+.menu3:hover{
+  clip-path: circle(700px at 155px 295px);
+}
+
+.幫{
+  position: absolute;
+  background-color: white;
+  right: 0.5px;
+  top: 0.5px;
+  border-radius: 100px;
+  padding: 8.2px 12.2px;
+ transition: 0s;
+}
+
+.menu3 a{
+  background-color: none;
+  position: absolute;
+  top: 6px;
+  color: white;  
+  transition: 0.7s;
+  margin-right: 10px;
+  
+}
+
+a:hover{
+  font-size: 15px;
+}
+
+
+/* 播放功能 */
+.了解SDGs{
+  position:absolute;
+  margin: 0;
+  top: 525px;
+  font-weight: 600;
+  color:aliceblue;
+  background: #888398;
+  padding: 8px 20px;
+  border: 1px solid #FFFFFF;
+  border-radius: 108px;
+}
+
+.play-btn{
+    width: 100%;
+   
+  }
+
+.video-player{
+  position: relative;
+    top: -5px;  
+    width: 100%;
+  ;
+}
+
+.video-player2{
+  position: absolute;
+  top: 633px;
+    width: 100%;
+    display: none;
+}
+
+.video-player305{
+  z-index: 4;
+  position: relative;
+  top: -10px;
+  width: 100%;
+}
+
+.video-player3{
+position: absolute;
+z-index: 5;
+display: none;
+top: 1317px;
+  width: 100%;
+}
+
+.video-player405{
+  position: relative;
+  top: -15px;
+  width: 100%;
+  z-index: 1;
+}
+.video-player4{
+  position: absolute;
+  top: 1945px;
+display: none;
+  width: 100%;
+  z-index: 2;
+}
+
+
+/*  */
+
+.實現性別平等{
+  transition: ease 0.3s;
+}
+.實現性別平等:hover{
+  color: #686868;
+}
+
+h1{
+  top: 735px;
+  position: absolute;
+  color: aliceblue;
+  z-index: 10000;
+  left: 120px;
+  margin: 0;
+  transition: ease 0.1s;
+
+}
+
+h1:hover{
+  scale: 1.02;
+  color: aliceblue;
+}
+
+.number{
+  position: relative;
+  margin-bottom: -70px;
+  font-size:200px;
+  font-weight: 900;
+  
+}
+
+.text{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+p{
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+}
+/*健康生活與福祉*/
+.健康生活與福祉{
+  transition: ease 0.3s;
+}
+.健康生活與福祉:hover{
+  color: #ffffff;
+}
+
+h3{
+  top: 1335px;
+  position: absolute;
+  color: aliceblue;
+  z-index: 10000;
+  left: 120px;
+  margin: 0;
+  transition: ease 0.1s;
+
+}
+
+h3:hover{
+  scale: 1.02;
+  color: aliceblue;
+}
+
+.number2{
+  position: relative;
+  margin-bottom: -70px;
+  font-size:200px;
+  font-weight: 900;
+  
+}
+
+.text3{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.p{
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+}
+
+/* 確保所有人都能享有水、衛生及其永續管理 */
+.確保所有人都能享有水、衛生及其永續管理{
+  transition: ease 0.3s;
+}
+.確保所有人都能享有水、衛生及其永續管理:hover{
+  color: #ffffff;
+}
+
+h4{
+  top:2000px;
+  position: absolute;
+  color: aliceblue;
+  z-index: 10000;
+  left: 120px;
+  margin: 0;
+  transition: ease 0.1s;
+
+}
+
+h4:hover{
+  scale: 1.02;
+  color: aliceblue;
+}
+
+.number3{
+  position: relative;
+  margin-bottom: -70px;
+  font-size:200px;
+  font-weight: 900;
+  
+}
+
+.text4{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.p{
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+}
+
+
+/* 了解更多 */
+.Button{
+  font-size: 50%;
+  background-color:#888398;
+  border: 1px solid #FFFFFF;
+  border-radius: 108px;
+  padding: 3% 8%;
+  border-radius:100px;
+  box-shadow: 0 0 0.3rem rgba(49, 49, 49, 0.2); /* black with 30% opacity */
+  transition: all .2s linear;
+  
+
+}
+
+.Button:hover{
+background-color:#767185;
+}
+
+
+/*  */
+.Button0{
+  padding: 0;
+  margin: 0;
+  top: 400px;
+  right: 265px;
+  position: absolute;
+  z-index: 100;
+  /* cursor:pointer; */
+  width: 100PX;
+  height: 100PX;
+  border-radius: 50%;
+  background: linear-gradient(45deg,transparent,transparent 40%,#ffffff);
+  -webkit-mask: radial-gradient(transparent 40px,#000 0px);
+  mask: radial-gradient(transparent 11px,rgb(255, 255, 255) 0px);
+  -webkit-filter: blur(5px); /* Safari */
+  filter: blur(10px);
+  animation: animate 2s linear infinite;
+
+  transition: ease 0.2s;
+
+scale: 0%;
+}
+
+@keyframes animate
+{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+
+
+}
+
+
+
+
+.Button0:hover{
+
+width: 105PX;
+  height: 105PX;
+  background: linear-gradient(45deg,transparent,transparent 40%,#e9c617);
+  
+}
+
+
+
+
+
+.Button0none{
+transition: ease 0.6s;
+scale: 0%;
+}
+
+.Button0block{
+transition: ease 0.6s;
+scale: 100%;
+}
+
+/*  */
+
+  .Button2{
+    padding: 0;
+    margin: 0;
+    top: 1050px;
+    right: 545px;
+    position: absolute;
+    z-index: 100;
+    /* cursor:pointer; */
+    width: 100PX;
+    height: 100PX;
+    border-radius: 50%;
+    background: linear-gradient(45deg,transparent,transparent 40%,#ffffff);
+    -webkit-mask: radial-gradient(transparent 40px,#000 0px);
+    mask: radial-gradient(transparent 11px,rgb(255, 255, 255) 0px);
+    -webkit-filter: blur(5px); /* Safari */
+    filter: blur(10px);
+    animation: animate 2s linear infinite;
+
+    transition: ease 0.2s;
+
+  scale: 0%;
+  }
+
+  @keyframes animate
+  {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+
+ 
+  }
+
+
+.Button2:hover{
+
+  width: 105PX;
+    height: 105PX;
+    background: linear-gradient(45deg,transparent,transparent 40%,#e9c617);
+    
+}
+
+
+
+
+
+ .Button2none{
+transition: ease 0.6s;
+  scale: 0%;
+}
+
+.Button2block{
+  transition: ease 0.6s;
+  scale: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+  .Button3{
+    padding: 0;
+    margin: 0;
+    top: 1350px;
+    right: 320px;
+    position: absolute;
+    z-index: 100;
+    /* cursor:pointer; */
+    width: 100PX;
+    height: 100PX;
+    border-radius: 50%;
+    background: linear-gradient(45deg,transparent,transparent 40%,#ffffff);
+    -webkit-mask: radial-gradient(transparent 40px,#000 0px);
+    mask: radial-gradient(transparent 11px,rgb(255, 255, 255) 0px);
+
+    animation: animate 2s linear infinite;
+
+    transition: ease 0.2s;
+
+scale: 0%;
+  }
+
+  
+  
+  .Button3:hover{
+    background: linear-gradient(45deg,transparent,transparent 40%,#e9c617);
+    width: 105PX;
+    height: 105PX;
+    }
+    
+
+    .Button3block{
+      transition: ease 0.6s;
+      scale: 100%;
+    }
+    
+    .Button3none{
+      transition: ease 0.6s;
+      scale: 0%;
+    }
+/*  */
+.Button4{
+  padding: 0;
+  margin: 0;
+  top: 2150px;
+  right: 565px;
+  position: absolute;
+  z-index: 100;
+  /* cursor:pointer; */
+  width: 100PX;
+  height: 100PX;
+  border-radius: 50%;
+  background: linear-gradient(45deg,transparent,transparent 40%,#ffffff);
+  -webkit-mask: radial-gradient(transparent 40px,#000 0px);
+  mask: radial-gradient(transparent 11px,rgb(255, 255, 255) 0px);
+
+  animation: animate 2s linear infinite;
+
+  transition: ease 0.2s;
+
+scale: 0%;
+}
+
+
+
+.Button4:hover{
+  background: linear-gradient(45deg,transparent,transparent 40%,#e9c617);
+  width: 105PX;
+  height: 105PX;
+  }
+  
+
+  .Button4block{
+    transition: ease 0.6s;
+    scale: 100%;
+  }
+  
+  .Button4none{
+    transition: ease 0.6s;
+    scale: 0%;
+  }
+
+
+
+/* nav */
+.navitem{
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content:center;
+  width: 100%;
+padding: 8px;
+transition: all 300ms ease-in-out;
+}
+
+
+
+/* menu */
+ul{
+  margin: 0;
+  padding: 0;
+ width: 80%;
+  text-align: end;
+  }
+  
+  a{
+    text-decoration: none;
+    margin-right: 8%;
+    color: #474747;
+    background: #FFFFFF;
+    background: none;
+    padding: 2px 15px;
+    border-radius: 100px;
+    font-size: 90%;
+  }
+
+  
+  .menu{
+    transition: all .2s linear;
+    color: #666666;
+  }
+  
+  .menu:hover{
+    transform: scale(0.9);
+
+  }
+  
+  .SDGs{
+    position: fixed;
+    top: 2%;
+    left: 1%;
+    z-index: 60000;
+    transition: all .2s linear;
+    font-weight: 900;
+    font-size: 115%;
+   
+  }
+  
+  .SDGs:hover{
+    font-size: 110%;
+    color: #e6e6e6;
+  }
+
+  .Button{
+    color: #e6e6e6;
+  }
+/* .Little{
+  width:50px;height:50px; border-radius: 100px; border-color: rgb(238, 240, 242); position: absolute ; left: 0; z-index: 1000;
+} */
+
+
+/* scroll */
+.scroll-down header{
+ transform: translate3d(0,-100%,0);
+}
+
+/* .scroll-up header{
+filter: drop-shadow(0 -10px 20px rgb(170,170,170));
+} */
+
+
+
+/* up&down */
+
+.up{
+  z-index: 50000;
+  display:flex;
+  justify-content: center;
+  top: 5px;
+  position: fixed;
+transition: 0.5s;
+background:none; width: 100%;
+
+}
+
+#up-size{
+  
+  width: 20px;
+  height: 0px;
+  background:none ;
+  padding: 30px;
+
+  width: 100%;
+  transition: ease 0.1s;
+
+}
+
+#up-size:hover{
+  
+  padding: 20px;
+  opacity: 100;
+  width: 30px;
+  height: 30px;
+  background:none ;
+  width: 100%;
+ 
+}
+
+
+.down{
+  z-index: 5000;
+  display:flex;
+  justify-content: center;
+  bottom: 5px;
+  position: fixed;
+transition: 0.5s;
+background:none; width: 100%;
+
+}
+
+#down-size{
+  transform:rotate(-10 50 100);
+  width: 20px;
+  height: 0px;
+  background:none ;
+  padding: 30px;
+  width: 100%;
+  transition: ease 0.1s;
+
+}
+
+#down-size:hover{
+  padding: 20px;
+  opacity: 100;
+  width: 30px;
+  height: 30px;
+  background:none;
+  width: 100%;
+ 
+}
+
+
+
+
